@@ -1,0 +1,82 @@
+#home .background {
+  background-image: url(../home/background-home-mobile.jpg);
+}
+
+#home h5 {
+  letter-spacing: 2.7px;
+}
+
+#home .contents-wrapper {
+  max-width: 327px;
+}
+
+#home .container {
+  padding-top: 24px;
+}
+
+#home .contents-wrapper {
+  max-width: 444px;
+}
+
+@media (min-width: 540px) {
+  #home .background {
+    background-image: url(../home/background-home-tablet.jpg);
+  }
+
+  #home .container {
+    padding-top: 106px;
+    margin-top: 96px;
+  }
+
+  #home h5 {
+    letter-spacing: 3.38px;
+  }
+
+  #home p {
+    font-size: 16px;
+  }
+
+  #home .contents-wrapper {
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 990px) {
+  #home .background {
+    background-image: url(../home/background-home-desktop.jpg);
+  }
+
+  #home .container {
+    box-sizing: border-box;
+    margin-top: 136px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+    padding-top: 251px;
+    padding-right: 165px;
+    text-align: left;
+  }
+
+  #home p {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  #home h5 {
+    font-size: 28px;
+    letter-spacing: 4.72px;
+  }
+
+  #home h1 {
+    margin: 24px 0;
+  }
+
+  #home .contents-wrapper {
+    height: 382px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: ;
+  }
+}

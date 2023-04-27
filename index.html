@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Space Tourism Website">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/contents.css">
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="mobile-nav">
+        <a href="/"><img class="logo" alt="logo" src="assets/shared/logo.svg"></a>
+        <svg class="mobile nav-btn hamburger" xmlns="http://www.w3.org/2000/svg" width="24" height="21">
+          <g fill="#D0D6F9" fill-rule="evenodd">
+            <path d="M0 0h24v3H0z" />
+            <path d="M0 9h24v3H0z" />
+            <path d="M0 18h24v3H0z" />
+          </g>
+        </svg>
+      </div>
+      <div class="line"></div>
+      <div class="nav-box">
+        <ul>
+          <li class="home active"><a href="index.html"><span>00</span>HOME</a></li>
+          <li class="destination"><span>01</span>DESTINATION</li>
+          <li class="crew"><span>02</span>CREW</li>
+          <li class="technology"><span>03</span>TECHNOLOGY</li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <div class="background"></div>
+      <div class="container">
+        <div class="contents-wrapper">
+          <h5>So, you want to travel to</h5>
+          <h1>Space</h1>
+          <p>Let’s face it; if you want to go to space, you might as well genuinely go to
+            outer space and not hover kind of on the edge of it. Well sit back, and relax
+            because we’ll give you a truly out of this world experience!
+          </p>
+        </div>
+        <div class="btn-wrapper">
+          <button class="btn">EXPLORER</button>
+        </div>
+      </div>
+    </section>
+    <section class="hidden" id="contents">
+      <div id="category">
+        <div class="background"></div>
+        <div class="container">
+          <h5><span></span><span></span></h5>
+          <div class="contents-wrapper">
+            <div class="img-wrapper">
+              <img class="dest" alt="" src="">
+              <img class="crew" alt="crew" src="">
+              <img class="tech" alt="technology" src="">
+            </div>
+            <div>
+              <div class="nav-wrapper">
+                <ul>
+                  <li class="active"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+              <div class="text-wrapper">
+                <div class="title">
+                  <h4></h4>
+                  <h3></h3>
+                  <div></div>
+                  <h2></h2>
+                </div>
+                <p></p>
+                <div class="line"></div>
+                <div class="destination-extra-div">
+                  <div>
+                    <div class="subheading2">avg. distance</div>
+                    <div class="subheading1"></div>
+                  </div>
+                  <div>
+                    <div class="subheading2">est. travel time</div>
+                    <div class="subheading1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="text.javascript" src="assets/js/data.json"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
