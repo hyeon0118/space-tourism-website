@@ -1,4 +1,3 @@
-/* background */
 #contents .destination .background {
   background-image: url(../destination/background-destination-mobile.jpg);
 }
@@ -46,6 +45,10 @@
   height: 100%;
 }
 
+#contents ul li.active {
+  color: white;
+}
+
 #contents ul li.active::after {
   content: "";
   position: absolute;
@@ -68,7 +71,7 @@
   background-color: rgb(255, 255, 255);
   opacity: 0;
   box-sizing: border-box;
-  transition: opacity 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 #contents ul li:hover::before {
@@ -204,12 +207,13 @@ img.dest {
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  transition: opacity 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
   letter-spacing: 0;
 }
 
 #contents .technology ul li:not(.active) {
-  transition: opacity 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  transition: border 0.2s ease-in-out;
 }
 
 .technology ul li::before,

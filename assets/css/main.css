@@ -24,6 +24,10 @@
   --purple: #d0d6f9;
 }
 
+#contents ul {
+  color: var(--purple);
+}
+
 .hidden {
   display: none !important;
 }
@@ -34,6 +38,7 @@ body {
   display: flex;
   justify-content: center;
   color: white;
+  overflow-x: hidden;
 }
 
 h1,
@@ -280,6 +285,12 @@ nav span {
   font-weight: bold;
 }
 
+.scroll {
+  overflow-x: scroll;
+  white-space: nowrap;
+  display: flex;
+}
+
 /* tablet */
 @media (min-width: 540px) {
   h2 {
@@ -382,6 +393,10 @@ nav span {
 
 /* desktop */
 @media (min-width: 990px) {
+  .scroll {
+    overflow-x: hidden;
+  }
+
   main {
     padding: 0;
     padding-left: 166.5px;
