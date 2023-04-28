@@ -277,8 +277,8 @@ navBtn.addEventListener("click", () => {
     navBtn.classList.toggle("hamburger", !isClicked);
     navBox.classList.toggle("menu-opened", isClicked);
     navBox.classList.toggle("menu-closed", !isClicked);
-    btnWrapper.style.zIndex = isClicked ? "-1" : "1";
-    navWrapper.style.zIndex = isClicked ? "-1" : "1";
+    homeContainer.style.zIndex = isClicked ? "-1" : "0";
+    navWrapper.style.zIndex = isClicked ? "-1" : "0";
 });
 
 
@@ -373,7 +373,8 @@ function navEffect() {
 
 navHome.addEventListener('click', () => {
     current = "home"
-    btnWrapper.style.zIndex = "1";
+    homeContainer.style.zIndex = "2";
+    homeAnimation()
     navEffect();
 });
 
