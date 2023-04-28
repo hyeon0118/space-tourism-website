@@ -404,7 +404,6 @@ function showEffect() {
         changes.forEach(change => {
             change.style.transition = "all 2s";
             change.style.transform = "translateY(0%)"
-            change.style.top = "0";
             change.style.opacity = "1";
         })
     }, 0);
