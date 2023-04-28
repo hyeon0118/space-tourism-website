@@ -42,6 +42,22 @@ const pageChanges = document.querySelectorAll('.pageChanges')
 
 let current = "home";
 
+const homeContainer = document.querySelector("#home .container");
+
+function homeAnimation() {
+    homeContainer.style.transform = "translateY(3%)"
+    homeContainer.style.opacity = "0";
+    homeContainer.style.transition = "";
+
+    setTimeout(() => {
+        homeContainer.style.transition = "all 2s";
+        homeContainer.style.transform = "translateY(0%)"
+        homeContainer.style.top = "0";
+        homeContainer.style.opacity = "1";
+    }, 200);
+}
+
+homeAnimation()
 
 function renderDest() {
     let currentDest = "Moon"
