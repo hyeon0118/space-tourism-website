@@ -232,7 +232,7 @@ img.dest {
   margin-bottom: 16px;
 }
 
-.technology ul li.active {
+#contents .technology ul li.active {
   background-color: white;
   color: black;
 }
