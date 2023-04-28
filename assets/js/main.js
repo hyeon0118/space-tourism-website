@@ -14,6 +14,8 @@ const navTech = document.querySelector("nav .technology")
 
 const contents = document.getElementById('contents');
 const cagetory = document.getElementById('category');
+const container = document.querySelector('#contents .container');
+const contentsWrapper = document.querySelector("#contents .contents-wrapper")
 
 const imgDest = contents.querySelector("img.dest");
 const imgCrew = contents.querySelector("img.crew");
@@ -35,7 +37,10 @@ const contentsLi = contentsUl.querySelectorAll("li");
 
 const navWrapper = document.querySelector(".nav-wrapper")
 
+const changes = document.querySelectorAll('.change')
+
 let current = "home";
+
 
 function renderDest() {
     let currentDest = "Moon"
@@ -43,7 +48,8 @@ function renderDest() {
     let h2 = contents.querySelector(".destination h2")
     const subheading1 = document.querySelector(".destination-extra-div > div:first-of-type > .subheading1")
     const subheading2 = document.querySelector(".destination-extra-div > div:last-of-type > .subheading1")
-    extraDiv.style.display = "flex";
+    extraDiv.style.displa = "flex";
+    extraDiv.classList.remove("hidden");
     titleH2.style.display = "block";
     titleH3.style.display = "none";
     titleH4.style.display = "none";
@@ -78,6 +84,7 @@ function renderDest() {
                     h2.textContent = destinations[i].name;
                     subheading1.textContent = destinations[i].distance
                     subheading2.textContent = destinations[i].travel
+                    showEffect()
                 });
             }
 
@@ -90,7 +97,7 @@ function renderDest() {
 function renderCrew() {
     let currentCrew = "0"
     category.className = "crew";
-    extraDiv.style.display = "none";
+    extraDiv.classList = "hidden";
     titleH2.style.display = "none";
     titleH3.style.display = "block";
     titleH4.style.display = "block";
@@ -123,6 +130,7 @@ function renderCrew() {
                     if (current === "crew") {
                         titleH4.textContent = crew[i].role;
                     }
+                    showEffect()
                 });
             }
         });
@@ -132,7 +140,7 @@ let currentTech = "0"
 
 function renderTech(screenWidth, current) {
     category.className = "technology"
-    extraDiv.style.display = "none";
+    extraDiv.classList = "hidden";
     titleH2.style.display = "none";
     titleH3.style.display = "block";
     titleH4.style.display = "block";
@@ -172,6 +180,7 @@ function renderTech(screenWidth, current) {
                     }
                     desc.textContent = tech[i].description;
                     titleH3.textContent = tech[i].name;
+                    showEffect()
                 });
             }
         });
@@ -203,6 +212,7 @@ window.addEventListener("resize", () => {
     }
 
 });
+
 
 
 function setContentsActiveClass(current) {
@@ -253,8 +263,9 @@ navBtn.addEventListener("click", () => {
     navBox.style.zIndex = "1";
     btnWrapper.style.zIndex = isClicked ? "-1" : "1";
     navWrapper.style.zIndex = isClicked ? "-1" : "1";
-
 });
+
+
 
 // menu close
 
@@ -341,6 +352,7 @@ function navEffect() {
     handleMenuClose();
     setActiveClass();
     changeContents();
+    fadeIn();
 }
 
 navHome.addEventListener('click', () => {
@@ -364,3 +376,35 @@ navTech.addEventListener('click', () => {
     current = "technology"
     navEffect();
 })
+
+
+function showEffect() {
+    changes.forEach(change => {
+        change.style.transform = "translateY(10%)"
+        change.style.opacity = "0";
+        change.style.transition = "";
+    })
+
+    setTimeout(() => {
+        changes.forEach(change => {
+            change.style.transition = "all 2s";
+            change.style.transform = "translateY(0%)"
+            change.style.top = "0";
+            change.style.opacity = "1";
+        })
+    }, 0);
+}
+
+function fadeIn() {
+    changes.forEach(change => {
+        change.removeAttribute("style");
+    })
+
+    contentsWrapper.style.opacity = "0";
+    contentsWrapper.style.transition = "";
+
+    setTimeout(() => {
+        contentsWrapper.style.transition = "all 2s";
+        contentsWrapper.style.opacity = "1";
+    }, 200);
+}
