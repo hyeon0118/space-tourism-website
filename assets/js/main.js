@@ -361,7 +361,6 @@ function setActiveClass() {
 
 
 function navEffect() {
-    navWrapper.style.zIndex = "1";
     pageChange();
     removeList();
     handleNavClose();
@@ -373,7 +372,6 @@ function navEffect() {
 
 navHome.addEventListener('click', () => {
     current = "home"
-    homeContainer.style.zIndex = "2";
     homeAnimation()
     navEffect();
 });
