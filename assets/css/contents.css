@@ -46,6 +46,7 @@
 }
 
 #contents ul li.active {
+  transition: 0.3s ease-in-out;
   color: white;
 }
 

@@ -5,7 +5,6 @@
   z-index: -1;
 }
 
-/* font */
 #contents ul {
   font-family: "Barlow Condensed", sans-serif;
 }
@@ -291,7 +290,6 @@ nav span {
   display: flex;
 }
 
-/* tablet */
 @media (min-width: 540px) {
   h2 {
     font-size: 80px;
@@ -391,7 +389,6 @@ nav span {
   }
 }
 
-/* desktop */
 @media (min-width: 990px) {
   .scroll {
     overflow-x: hidden;
@@ -445,7 +442,7 @@ nav span {
     width: 830px;
   }
 
-  nav span {
+  .nav-box span {
     display: inline-block;
   }
 
