@@ -16,6 +16,10 @@
   }
 }
 
+#contents .container {
+  animation: fade-in 2s;
+}
+
 #home .background {
   background-image: url(../home/background-home-mobile.jpg);
 }

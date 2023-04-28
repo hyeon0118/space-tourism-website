@@ -227,11 +227,11 @@ p {
 .nav-box ul li::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: 219px;
   top: 0;
-  width: 100%;
+  width: 3px;
   height: 100%;
-  border-right: 3px solid rgba(255, 255, 255);
+  background-color: rgba(255, 255, 255);
   opacity: 0;
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
@@ -314,10 +314,11 @@ nav span {
   }
 
   .nav-box ul li::before {
-    border-right: none;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 93px;
     width: 0;
-    border-bottom: 3px solid rgba(255, 255, 255);
-    opacity: 0;
+    height: 3px;
   }
 
   .nav-box ul li:hover::before {

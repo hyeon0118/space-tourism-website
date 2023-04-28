@@ -60,17 +60,20 @@
 #contents ul li::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border-bottom: 3px solid transparent;
+  left: 50%;
+  top: 25px;
+  width: 0;
+  height: 3px;
+  transform: translateX(-50%);
+  background-color: rgb(255, 255, 255);
+  opacity: 0;
   box-sizing: border-box;
   transition: 0.3s ease-in-out;
 }
 
 #contents ul li:hover::before {
-  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  width: 100%;
+  opacity: 0.5;
 }
 
 #contents .contents-wrapper {
@@ -128,7 +131,7 @@
   opacity: 0.5;
 }
 
-.crew ul .crew ul li::before {
+.crew ul li::before {
   display: none;
 }
 
