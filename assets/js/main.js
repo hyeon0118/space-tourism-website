@@ -38,6 +38,7 @@ const contentsLi = contentsUl.querySelectorAll("li");
 const navWrapper = document.querySelector(".nav-wrapper")
 
 const changes = document.querySelectorAll('.change')
+const pageChanges = document.querySelectorAll('.pageChanges')
 
 let current = "home";
 
@@ -97,7 +98,7 @@ function renderDest() {
 function renderCrew() {
     let currentCrew = "0"
     category.className = "crew";
-    extraDiv.classList = "hidden";
+    extraDiv.classList.add("hidden");
     titleH2.style.display = "none";
     titleH3.style.display = "block";
     titleH4.style.display = "block";
@@ -140,7 +141,7 @@ let currentTech = "0"
 
 function renderTech(screenWidth, current) {
     category.className = "technology"
-    extraDiv.classList = "hidden";
+    extraDiv.classList.add("hidden");
     titleH2.style.display = "none";
     titleH3.style.display = "block";
     titleH4.style.display = "block";
@@ -260,7 +261,6 @@ navBtn.addEventListener("click", () => {
     navBtn.classList.toggle("hamburger", !isClicked);
     navBox.classList.toggle("menu-opened", isClicked);
     navBox.classList.toggle("menu-closed", !isClicked);
-    navBox.style.zIndex = "1";
     btnWrapper.style.zIndex = isClicked ? "-1" : "1";
     navWrapper.style.zIndex = isClicked ? "-1" : "1";
 });
@@ -396,15 +396,17 @@ function showEffect() {
 }
 
 function fadeIn() {
-    changes.forEach(change => {
+    pageChanges.forEach(change => {
         change.removeAttribute("style");
+        change.style.opacity = "0";
+        change.style.transition = "";
     })
 
-    contentsWrapper.style.opacity = "0";
-    contentsWrapper.style.transition = "";
-
     setTimeout(() => {
-        contentsWrapper.style.transition = "all 2s";
-        contentsWrapper.style.opacity = "1";
-    }, 200);
+        pageChanges.forEach(change => {
+            change.style.transition = "all 2s";
+            change.style.opacity = "1";
+        })
+    }, 0);
+
 }
