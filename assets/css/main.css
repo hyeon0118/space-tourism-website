@@ -190,6 +190,10 @@ p {
   background-color: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
 }
 
 .nav-box.menu-opened {
